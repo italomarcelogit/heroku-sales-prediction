@@ -43,6 +43,8 @@ def setup_creator():
 
     mes = st.sidebar.slider(f'Mês:', 1, 12, 6)
 
+    st.sidebar.write("""** @italomarcelogit **""")
+
     dados = {
         'EMPRESA': 1,
         'MES': mes
