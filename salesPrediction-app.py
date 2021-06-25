@@ -6,7 +6,8 @@ from sklearn.model_selection import train_test_split
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title='Sample Sales Forecast')
+
 st.sidebar.header('Sales Forecast - Setup:')
 df = pd.read_csv('vendas.csv')
 listaClientes = df.CLIENTE.sort_values(ascending=True).unique().tolist()
@@ -44,6 +45,11 @@ def setup_creator():
     mes = st.sidebar.slider(f'Mês:', 1, 12, 6)
 
     st.sidebar.write("""** @italomarcelogit **""")
+    st.sidebar.write("""** /heroku-sales-prediction **""")
+    st.sidebar.write("""* Pandas """)
+    st.sidebar.write("""* Numpy """)
+    st.sidebar.write("""* Scikit-Learn """)
+    st.sidebar.write("""* Streamlit """)
 
     dados = {
         'EMPRESA': 1,
